@@ -33,7 +33,7 @@ br {
 
 .top {
   background-color: #9ef3c1;
-  height: 50vh;
+  height: 30vh;
 }
 
 .bottom {
@@ -72,7 +72,7 @@ br {
 
 .census-title {
   font-size: 2.3em;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .census-list {
