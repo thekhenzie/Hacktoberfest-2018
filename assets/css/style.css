@@ -3,7 +3,7 @@ body {
   padding: 0em;
   height: 100%;
   width: 100%;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Charmonman', cursive;
   background-color: #fff;
 }
 
@@ -32,8 +32,8 @@ br {
 }
 
 .top {
-  background-color: #ff8764;
-  height: 100vh;
+  background-color: #9ef3c1;
+  height: 50vh;
 }
 
 .bottom {
