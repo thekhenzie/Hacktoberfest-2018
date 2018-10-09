@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hacktoberfest Census</title>
+  <link rel="icon" href="assets/img/favicon.ico">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f"
+    crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Charmonman:700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width">
+  <!-- <script src="https://raw.githubusercontent.com/thekhenzie/Hacktoberfest-2018/master/assets/js/contributors.js"></script> -->
+  <link rel="stylesheet" href="https://thekhenzie.github.io/Hacktoberfest-2018/assets/css/style.css">
+</head>
+
+<body>
+  <div class="fill top">
+    <br />
+    <p class="center repo-desc"> A list of those participating in <a href="https://hacktoberfest.digitalocean.com/">#Hacktoberfest</a>
+    </p><br />
+  </div>
+
+  <div class="fill bottom">
+    <h1 class="center census-title" id="census-count"></h1>
+    <ul id="census-list"></ul>
+  </div>
+
+  <script>
+    $.get(
+      'https://raw.githubusercontent.com/thekhenzie/Hacktoberfest-2018/master/README.md',
+      function (file) {
+        const census_md = file.split('## Contributors')[1].split('\n');
+        let census_count = 0;
+
+        census_md.map(user => {
+          if (!user) {
+            return;
+          }
+
+          return {
+            name: user.substring(user.lastIndexOf('[') + 1, user.lastIndexOf(']')),
+            url: user.substring(user.lastIndexOf('(') + 1, user.lastIndexOf(')')),
+          }
+        })
+          .sort((user1, user2) => {
+            return user1.name.localeCompare(user2.name)
+          })
+          .forEach(user => {
+            if (user) {
+              $('#census-list').append(`<li class='census-item'><a href="${user.url}">${user.name}</a></li>`);
+
+              census_count++;
+            }
+          });
+
+        $('#census-count').html(`${census_count} Contributors:`);
+      }
+    );
+  </script>
+</body>
+
+</html>
