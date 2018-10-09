@@ -1,5 +1,5 @@
 # Hacktoberfest
-Make your first pull request here for Hacktoberfest! https://thekhenzie.github.io/Hacktoberfest-2018/
+Make your first pull request here for Hacktoberfest! [Website here](https://thekhenzie.github.io/Hacktoberfest-2018/)
 
 ## Getting Started
 
