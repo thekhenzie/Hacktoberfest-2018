@@ -10,8 +10,6 @@
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <meta name="viewport" content="width=device-width">
-  <!-- <script src="https://raw.githubusercontent.com/thekhenzie/Hacktoberfest-2018/master/assets/js/contributors.js"></script> -->
-  <!-- <link rel="stylesheet" href="https://thekhenzie.github.io/Hacktoberfest-2018/assets/css/style.css"> -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -54,7 +52,6 @@
           })
           .forEach(user => {
             if (user) {
-              // $('#census-list').append(`<li class='census-item'><a href="${user.url}">${user.name}</a></li>`);
               $('#contrib-list').append(`<p class='col-md-4 box-button'><a href="${user.url}">${user.name}</a></p>`);
 
               census_count++;
